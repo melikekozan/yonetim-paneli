@@ -6,12 +6,16 @@
       <i style="float:right;" class="el-icon-circle-check"></i>
       <i style="float:right; margin-right:5px" class="el-icon-edit-outline"></i>
     </div>
-    <div class="card-body">
-      <h4 class="card-title">Primary card title</h4>
-      <p
-        class="card-text"
-      >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="card-container">
+      <div class="card-title">title</div>
+      <div class="card-items">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
     </div>
+    <div>card 1</div>
+    <div>card 1</div>
   </div>
 </template>
 
@@ -20,6 +24,21 @@ export default {};
 </script>
 
 <style>
+.card-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 5px 10px
+}
+
+.card-items {
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+  width: 80% 
+}
 .card {
   border-style: solid;
   border-color: #73c4be;

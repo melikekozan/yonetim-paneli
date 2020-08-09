@@ -8,11 +8,10 @@
     </div>
     <div class="card-body">
       <el-collapse>
-        <el-collapse-item>
+        <el-collapse-item class="custom-collapse">
           <template slot="title">
             <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">Check all</el-checkbox>
           </template>
-          <div style="margin: 15px 0;"></div>
           <hr />
           <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
             <el-checkbox v-for="city in cities" :label="city" :key="city">{{ city }}</el-checkbox>
@@ -69,7 +68,7 @@ export default {
   display: flex !important;
   flex-direction: column;
 }
-.el-checkbox {
+.custom-collapse {
   /* display: flex !important;
   flex-direction: row-reverse !important;
   justify-content: space-between !important; */
