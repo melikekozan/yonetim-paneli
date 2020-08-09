@@ -7,18 +7,34 @@
       <i style="float:right; margin-right:5px;" class="el-icon-delete"></i>
     </div>
     <div class="card-body">
-      <fieldset class="user-border">
+      <fieldset class="user-border" style="position: relative">
         <legend class="user-border">ARA</legend>
-        <div class="control">
-          <el-input style="float:right; display:flex" placeholder v-model="input"></el-input>
-          <i style="float:right;" class="el-icon-search"></i>
-        </div>
-        <label style="font-size:11px; padding:0 0 0 5px;"></label>
+        <el-input
+          placeholder="smth"
+          value="oytun"
+          style="height: 15px !important;
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    padding: 0 !important;
+    margin-left: 2px !important;"
+        ></el-input>
+        <i style="float:right; position: absolute; right: 5px; top:30%; bottom: 30% " class="el-icon-search"></i>
       </fieldset>
-      <fieldset class="user-border">
+
+      <fieldset class="user-border" style="position:relative; height: 40px">
         <legend class="user-border">MÜDÜR</legend>
-        <div class="control"></div>
-        <label style="font-size:11px; padding:0 0 0 5px;">SÜLEYMAN ALTINKAYA</label>
+        <el-input
+          placeholder="smth"
+          value="oytun"
+          style="height: 15px !important;
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    padding: 0 !important;
+    margin-left: 2px !important;"
+        ></el-input>
+        <!-- <label style="font-size:11px; padding:0 0 0 5px;">SÜLEYMAN ALTINKAYA</label> -->
       </fieldset>
       <fieldset class="user-border">
         <legend class="user-border">MEMUR</legend>
@@ -41,7 +57,7 @@
 export default {
   data() {
     return {
-      input: "",
+      input: '',
     };
   },
 };
@@ -74,16 +90,23 @@ fieldset.user-border {
   box-shadow: 0px 0px 0px 0px #73c4be;
   float: left;
   width: 100%;
+  height: 40px;
 }
 legend.user-border {
-  width: inherit;
-  padding: 0 10px;
-  border-bottom: none;
+  width: fit-content !important;
+  background-color: unset;
+  margin: 0 10px;
+  padding: 0 6px;
+  border-bottom: none !important;
   font-size: 9px;
   font-weight: bold;
   color: #3a4458;
 }
 .el-input__inner {
   border: 1px solid #fff !important;
+  height: 20px !important;
+  padding: 0 !important;
+  margin: 0 8px;
+  width: 80% !important;
 }
 </style>

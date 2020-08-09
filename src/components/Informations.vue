@@ -9,20 +9,30 @@
     <div class="card-body">
       <div>
         <div class="container">
-          <div class="profile-container">
+          <!-- <div class="profile-container">
             <fieldset class="user-border">
               <legend class="user-border">* ERKEK KULLANICI RESMİ</legend>
               <div class="control"></div>
               <label style="font-size:11px; padding:0 0 0 5px;"></label>
               <i class="el-icon-s-custom"></i>
             </fieldset>
+          </div> -->
+          
+    
+          <div class="profile-container">
+            <fieldset class="card-border">
+              <legend class="user-border">* ERKEK KULLANICI RESMİ</legend>
+              <div class="icon-container">
+                <i class="el-icon-s-custom large-icon"></i>
+              </div>
+            </fieldset>
           </div>
           <div class="profile-container">
-            <fieldset class="user-border">
+            <fieldset class="card-border">
               <legend class="user-border">* KADIN KULLANICI RESMİ</legend>
-              <div class="control"></div>
-              <label style="font-size:11px; padding:0 0 0 5px;"></label>
-              <i class="el-icon-s-custom"></i>
+              <div class="icon-container">
+                <i class="el-icon-s-custom large-icon"></i>
+              </div>
             </fieldset>
           </div>
         </div>
@@ -120,6 +130,9 @@ export default {
 .card-header i {
   font-size: 17px;
 }
+.user-border {
+  white-space: nowrap !important;
+}
 fieldset.user-border {
   border: 1px groove #73c4be !important;
   padding: 0 0.3em 0.3em 0.3em !important;
@@ -127,25 +140,32 @@ fieldset.user-border {
   -webkit-box-shadow: 0px 0px 0px 0px #73c4be;
   box-shadow: 0px 0px 0px 0px #73c4be;
 }
-legend.user-border {
-  width: inherit;
-  padding: 0 10px;
-  border-bottom: none;
-  font-size: 9px;
-  font-weight: bold;
-  color: #3a4458;
-}
 .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 !important
 }
 .profile-container {
   display: flex;
   border-radius: 5px !important;
-  width: 130px;
+  width: 48%;
   height: auto;
 }
 .profile-container i {
   font-size: 30px;
-  position: absolute;
-  padding: 0 0 0 30px;
+}
+
+.card-border {
+   border:1px solid black;
+   border-radius: 12px;
+}
+.icon-container {
+  width: 100%;
+  text-align: center  
+}
+
+.large-icon {
+  font-size: 96px !important;
+  padding: 10px
 }
 </style>

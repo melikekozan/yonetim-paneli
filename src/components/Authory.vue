@@ -10,16 +10,12 @@
       <el-collapse>
         <el-collapse-item>
           <template slot="title">
-            <el-checkbox
-              :indeterminate="isIndeterminate"
-              v-model="checkAll"
-              @change="handleCheckAllChange"
-            >Check all</el-checkbox>
+            <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">Check all</el-checkbox>
           </template>
           <div style="margin: 15px 0;"></div>
           <hr />
           <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
-            <el-checkbox v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox>
+            <el-checkbox v-for="city in cities" :label="city" :key="city">{{ city }}</el-checkbox>
           </el-checkbox-group>
         </el-collapse-item>
       </el-collapse>
@@ -28,17 +24,12 @@
 </template>
 
 <script>
-const Options = [
-  "Shangggggghai",
-  "Beijggggging",
-  "Guanggggzhou",
-  "Shegggnzhen",
-];
+const Options = ['Shangggggghai', 'Beijggggging', 'Guanggggzhou', 'Shegggnzhen'];
 export default {
   data() {
     return {
       checkAll: false,
-      checkedCities: ["Shanghai", "Beijing"],
+      checkedCities: [],
       cities: Options,
       isIndeterminate: true,
     };
@@ -51,8 +42,7 @@ export default {
     handleCheckedCitiesChange(value) {
       let checkedCount = value.length;
       this.checkAll = checkedCount === this.cities.length;
-      this.isIndeterminate =
-        checkedCount > 0 && checkedCount < this.cities.length;
+      this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
     },
   },
 };
@@ -73,5 +63,16 @@ export default {
 }
 .card-header i {
   font-size: 17px;
+}
+
+.el-checkbox-group {
+  display: flex !important;
+  flex-direction: column;
+}
+.el-checkbox {
+  /* display: flex !important;
+  flex-direction: row-reverse !important;
+  justify-content: space-between !important; */
+
 }
 </style>
