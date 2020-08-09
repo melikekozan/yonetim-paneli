@@ -9,46 +9,22 @@
     <div class="card-body">
       <fieldset class="user-border" style="position: relative">
         <legend class="user-border">ARA</legend>
-        <el-input
-          placeholder="smth"
-          value="oytun"
-          style="height: 15px !important;
-    position: absolute;
-    top: 10px;
-    left: -4px;
-    padding: 0 !important;
-    margin-left: 2px !important;"
-        ></el-input>
-        <i style="float:right; position: absolute; right: 5px; top:30%; bottom: 30% " class="el-icon-search"></i>
+        <el-input placeholder value></el-input>
+        <i class="icon el-icon-search"></i>
       </fieldset>
 
-      <fieldset class="user-border" style="position:relative; height: 40px">
+      <fieldset class="user-border" style="position:relative;">
         <legend class="user-border">MÜDÜR</legend>
-        <el-input
-          placeholder="smth"
-          value="oytun"
-          style="height: 15px !important;
-    position: absolute;
-    top: 10px;
-    left: -4px;
-    padding: 0 !important;
-    margin-left: 2px !important;"
-        ></el-input>
-        <!-- <label style="font-size:11px; padding:0 0 0 5px;">SÜLEYMAN ALTINKAYA</label> -->
+        <el-input placeholder="smth" value="SÜLEYMAN ALTINKAYA"></el-input>
       </fieldset>
-      <fieldset class="user-border">
+      <fieldset class="user-border" style="position:relative;">
         <legend class="user-border">MEMUR</legend>
-        <div class="control"></div>
-        <label style="font-size:11px; padding:0 0 0 5px;">TARIK SARI</label>
+        <el-input placeholder="smth" value="TARIK SARI"></el-input>
       </fieldset>
-      <div class="ayay">
-        <fieldset class="user-border">
-          <legend class="user-border">FOTOĞRAFÇI</legend>
-          <div class="control">
-            <el-input placeholder v-model="input"></el-input>
-          </div>
-        </fieldset>
-      </div>
+      <fieldset class="user-border" style="position:relative;">
+        <legend class="user-border">FOTOĞRAFÇI</legend>
+        <el-input placeholder="smth" value="MACİT AHISKALI"></el-input>
+      </fieldset>
     </div>
   </div>
 </template>
@@ -57,7 +33,7 @@
 export default {
   data() {
     return {
-      input: '',
+      input: "",
     };
   },
 };
@@ -101,6 +77,22 @@ legend.user-border {
   font-size: 9px;
   font-weight: bold;
   color: #3a4458;
+}
+div.el-input {
+  height: 15px !important;
+  position: absolute;
+  top: 10px;
+  left: -4px;
+  padding: 0 !important;
+  margin-left: 2px !important;
+  font-size: 11px;
+}
+.icon {
+  float: right;
+  position: absolute;
+  right: 5px;
+  top: 30%;
+  bottom: 30%;
 }
 .el-input__inner {
   border: 1px solid #fff !important;

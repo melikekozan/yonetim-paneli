@@ -3,22 +3,12 @@
     <div class="card-header">
       <i class="el-icon-user"></i>
       BİLGİLERİ
-      <i style="float:right;" class="el-icon-circle-check"></i>
-      <i style="float:right; margin-right:5px" class="el-icon-edit-outline"></i>
+      <i class="icn el-icon-circle-check"></i>
+      <i style="margin-right:5px" class="icn el-icon-edit-outline"></i>
     </div>
     <div class="card-body">
       <div>
         <div class="container">
-          <!-- <div class="profile-container">
-            <fieldset class="user-border">
-              <legend class="user-border">* ERKEK KULLANICI RESMİ</legend>
-              <div class="control"></div>
-              <label style="font-size:11px; padding:0 0 0 5px;"></label>
-              <i class="el-icon-s-custom"></i>
-            </fieldset>
-          </div> -->
-          
-    
           <div class="profile-container">
             <fieldset class="card-border">
               <legend class="user-border">* ERKEK KULLANICI RESMİ</legend>
@@ -36,65 +26,62 @@
             </fieldset>
           </div>
         </div>
-        <fieldset class="user-border">
+        <fieldset class="user-border" style="position: relative">
           <legend class="user-border">* AD SOYAD</legend>
-          <div class="control"></div>
-          <label style="font-size:11px; padding:0 0 0 5px;">MACİT AHISKALI</label>
-          <i style="float:right; margin-right:5px" class="el-icon-user"></i>
+          <el-input placeholder value="MACİT AHISKALI"></el-input>
+          <i class="icon el-icon-user"></i>
         </fieldset>
-        <fieldset class="user-border">
+        <fieldset class="user-border" style="position: relative">
           <legend class="user-border">* BİRİM</legend>
-          <div class="control"></div>
-          <label style="font-size:11px; padding:0 0 0 5px;">MACİT AHISKALI</label>
-          <i style="float:right; margin-right:5px" class="el-icon-user"></i>
+          <el-input placeholder value="BASIN YAYIN"></el-input>
+          <i class="icon el-icon-box"></i>
         </fieldset>
-        <fieldset class="user-border">
+        <fieldset class="user-border" style="position: relative">
           <legend class="user-border">* ÜNVAN</legend>
-          <div class="control"></div>
-          <label style="font-size:11px; padding:0 0 0 5px;">MACİT AHISKALI</label>
-          <i style="float:right; margin-right:5px" class="el-icon-user"></i>
+          <el-input placeholder value="MEMUR"></el-input>
+          <i class="icon el-icon-price-tag"></i>
         </fieldset>
-        <fieldset class="user-border">
-          <legend class="user-border">* SABİT NUMARA</legend>
-          <div class="control"></div>
-          <label style="font-size:11px; padding:0 0 0 5px;">MACİT AHISKALI</label>
-          <i style="float:right; margin-right:5px" class="el-icon-user"></i>
+        <fieldset class="user-border" style="position: relative">
+          <legend class="user-border">SABİT NUMARA</legend>
+          <el-input placeholder value="0312 224 36 98 - 187"></el-input>
+          <i class="icon el-icon-phone"></i>
         </fieldset>
-        <fieldset class="user-border">
+        <fieldset class="user-border" style="position: relative">
           <legend class="user-border">* CEP NUMARA</legend>
-          <div class="control"></div>
-          <label style="font-size:11px; padding:0 0 0 5px;">MACİT AHISKALI</label>
-          <i style="float:right; margin-right:5px" class="el-icon-user"></i>
+          <el-input placeholder value="0544 445 90 90"></el-input>
+          <i class="iconn el-icon-mobile-phone"></i>
+          <i class="icn el-icon-circle-plus-outline"></i>
         </fieldset>
-        <fieldset class="user-border">
+        <fieldset class="user-border" style="position: relative">
           <legend class="user-border">* E-POSTA</legend>
-          <div class="control"></div>
-          <label style="font-size:11px; padding:0 0 0 5px;">MACİT AHISKALI</label>
-          <i style="float:right; margin-right:5px" class="el-icon-user"></i>
+          <el-input placeholder value="macit.ahiskali@tika.gov.tr"></el-input>
+          <i class="iconn el-icon-message"></i>
+          <i class="icn el-icon-circle-plus-outline"></i>
         </fieldset>
-        <fieldset class="user-border">
-          <legend class="user-border">* ŞİFRE</legend>
-          <div class="control"></div>
-          <label style="font-size:11px; padding:0 0 0 5px;">MACİT AHISKALI</label>
-          <i style="float:right; margin-right:5px" class="el-icon-user"></i>
+        <fieldset class="user-border" style="position: relative">
+          <legend class="user-border">ŞİFRE</legend>
+          <el-input placeholder value="* * * * * * * * *"></el-input>
+          <i class="iconn el-icon-key"></i>
+          <i class="icn el-icon-view"></i>
         </fieldset>
-        <fieldset class="user-border">
+        <fieldset class="user-border" style="position: relative">
           <legend class="user-border">* GİRİŞ DOĞRULAMA YÖNTEMİ</legend>
-          <div class="control"></div>
-          <label style="font-size:11px; padding:0 0 0 5px;">MACİT AHISKALI</label>
-          <i style="float:right; margin-right:5px" class="el-icon-user"></i>
+          <el-input placeholder value="SMS"></el-input>
+          <i class="iconn el-icon-lock"></i>
+          <i class="icn el-icon-arrow-down"></i>
         </fieldset>
-        <fieldset class="user-border">
-          <legend class="user-border">* AD SOYAD</legend>
-          <div class="control"></div>
-          <label style="font-size:11px; padding:0 0 0 5px;">MACİT AHISKALI</label>
-          <i style="float:right; margin-right:5px" class="el-icon-user"></i>
+        <fieldset class="user-border" style="position: relative">
+          <legend class="user-border">İÇERİK ONAY YETKİSİ</legend>
+          <el-input placeholder value="VERİLDİ"></el-input>
+          <i class="iconn el-icon-circle-check"></i>
+          <i class="icn el-icon-arrow-down"></i>
         </fieldset>
-        <fieldset class="user-border">
-          <legend class="user-border">* AD SOYAD</legend>
-          <div class="control"></div>
-          <label style="font-size:11px; padding:0 0 0 5px;">MACİT AHISKALI</label>
-          <i style="float:right; margin-right:5px" class="el-icon-user"></i>
+        <fieldset class="user-border" style="position: relative">
+          <legend class="user-border">ERİŞİM IP ADRESİ</legend>
+          <el-input placeholder value="192.168.2.259"></el-input>
+          <i class="icn el-icon-location-outline"></i>
+          <i class="icn el-icon-circle-plus-outline"></i>
+          <i class="icn el-icon-search"></i>
         </fieldset>
       </div>
     </div>
@@ -143,7 +130,7 @@ fieldset.user-border {
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 0 !important
+  padding: 0 !important;
 }
 .profile-container {
   display: flex;
@@ -156,16 +143,32 @@ fieldset.user-border {
 }
 
 .card-border {
-   border:1px solid black;
-   border-radius: 12px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+.icon {
+  float: right;
+  position: absolute;
+  right: 5px;
+  top: 30%;
+  bottom: 30%;
 }
 .icon-container {
   width: 100%;
-  text-align: center  
+  text-align: center;
 }
 
 .large-icon {
   font-size: 96px !important;
-  padding: 10px
+  padding: 10px;
+}
+
+.iconn {
+  float: right;
+  margin-left: 5px;
+}
+
+.icn {
+  float: right;
 }
 </style>

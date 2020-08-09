@@ -10,11 +10,67 @@
       <el-collapse>
         <el-collapse-item class="custom-collapse">
           <template slot="title">
-            <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">Check all</el-checkbox>
+            <el-checkbox v-model="checkAll" @change="handleCheckAllChange">KULLANICI YÖNETİMİ</el-checkbox>
           </template>
           <hr />
-          <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
-            <el-checkbox v-for="city in cities" :label="city" :key="city">{{ city }}</el-checkbox>
+          <el-checkbox-group v-model="checkedOptions" @change="handleCheckedOptions">
+            <el-checkbox v-for="option in options" :label="option" :key="option">{{ option }}</el-checkbox>
+          </el-checkbox-group>
+        </el-collapse-item>
+      </el-collapse>
+      <el-collapse>
+        <el-collapse-item class="custom-collapse">
+          <template slot="title">
+            <el-checkbox
+              v-model="checkAllSecreen"
+              @change="handleCheckAllChangeScreen"
+            >EKRAN YÖNETİMİ</el-checkbox>
+          </template>
+          <hr />
+          <el-checkbox-group v-model="checkedScreens" @change="handleCheckedScreen">
+            <el-checkbox v-for="screen in screens" :label="screen" :key="screen">{{ screen }}</el-checkbox>
+          </el-checkbox-group>
+        </el-collapse-item>
+      </el-collapse>
+      <el-collapse>
+        <el-collapse-item class="custom-collapse">
+          <template slot="title">
+            <el-checkbox
+              v-model="checkAllContent"
+              @change="handleCheckAllChangeContents"
+            >İÇERİK YÖNETİMİ</el-checkbox>
+          </template>
+          <hr />
+          <el-checkbox-group v-model="checkedContents" @change="handleCheckedContents">
+            <el-checkbox v-for="content in contents" :label="content" :key="content">{{ content }}</el-checkbox>
+          </el-checkbox-group>
+        </el-collapse-item>
+      </el-collapse>
+      <el-collapse>
+        <el-collapse-item class="custom-collapse">
+          <template slot="title">
+            <el-checkbox
+              v-model="checkAllSupport"
+              @change="handleCheckAllChangeSupport"
+            >DESTEK YÖNETİMİ</el-checkbox>
+          </template>
+          <hr />
+          <el-checkbox-group v-model="checkedSupports" @change="handleCheckedSupports">
+            <el-checkbox v-for="support in supports" :label="support" :key="support">{{ support }}</el-checkbox>
+          </el-checkbox-group>
+        </el-collapse-item>
+      </el-collapse>
+      <el-collapse>
+        <el-collapse-item class="custom-collapse">
+          <template slot="title">
+            <el-checkbox
+              v-model="checkAllClient"
+              @change="handleCheckAllChangeClients"
+            >MÜŞTERİ YÖNETİMİ</el-checkbox>
+          </template>
+          <hr />
+          <el-checkbox-group v-model="checkedClients" @change="handleCheckedClients">
+            <el-checkbox v-for="client in clients" :label="client" :key="client">{{ client }}</el-checkbox>
           </el-checkbox-group>
         </el-collapse-item>
       </el-collapse>
@@ -23,25 +79,103 @@
 </template>
 
 <script>
-const Options = ['Shangggggghai', 'Beijggggging', 'Guanggggzhou', 'Shegggnzhen'];
+const Options = ["GÖRÜNTÜLEME", "EKLEME", "DÜZENLEME", "SİLME"];
+const Screens = [
+  "GÖRÜNTÜLEME",
+  "EKLEME",
+  "DÜZENLEME",
+  "SİLME",
+  "E-POSTA BİLDİRİMİ",
+  "SMS BİLDİRİMİ",
+];
+const Supports = [
+  "DESTEK TALEBİ OLUŞTURMA",
+  "YANITLAMA",
+  "GÖRÜNTÜLEME",
+  "SİLME",
+  "E-POSTA BİLDİRİMİ",
+  "SMS BİLDİRİMİ",
+];
+const Contents = [
+  "GÖRÜNTÜLEME",
+  "EKLEME",
+  "DÜZENLEME",
+  "SİLME",
+  "E-POSTA BİLDİRİMİ",
+  "SMS BİLDİRİMİ",
+];
+const Clients = ["X", "Y", "Z"];
+
 export default {
   data() {
     return {
       checkAll: false,
-      checkedCities: [],
-      cities: Options,
-      isIndeterminate: true,
+      checkAllSecreen: false,
+      checkAllSupport: false,
+      checkAllContent: false,
+      checkAllClient: false,
+      checkedOptions: [],
+      options: Options,
+      checkedScreens: [],
+      screens: Screens,
+      checkedSupports: [],
+      supports: Supports,
+      checkedContents: [],
+      contents: Contents,
+      checkedClients: [],
+      clients: Clients,
     };
   },
   methods: {
-    handleCheckAllChange(val) {
-      this.checkedCities = val ? Options : [];
+    handleCheckAllChange(val1) {
+      this.checkedOptions = val1 ? Options : [];
       this.isIndeterminate = false;
     },
-    handleCheckedCitiesChange(value) {
-      let checkedCount = value.length;
-      this.checkAll = checkedCount === this.cities.length;
-      this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
+    handleCheckedOptions(value1) {
+      let checkedCount = value1.length;
+      this.checkAll = checkedCount === this.options.length;
+      this.isIndeterminate =
+        checkedCount > 0 && checkedCount < this.options.length;
+    },
+    handleCheckAllChangeScreen(val2) {
+      this.checkedScreens = val2 ? Screens : [];
+      this.isIndeterminate = false;
+    },
+    handleCheckedScreen(value2) {
+      let checkedCount1 = value2.length;
+      this.checkAllSecreen = checkedCount1 === this.screens.length;
+      this.isIndeterminate =
+        checkedCount1 > 0 && checkedCount1 < this.screens.length;
+    },
+    handleCheckAllChangeSupport(val3) {
+      this.checkedSupports = val3 ? Supports : [];
+      this.isIndeterminate = false;
+    },
+    handleCheckedSupports(value3) {
+      let checkedCount2 = value3.length;
+      this.checkAllSupport = checkedCount2 === this.supports.length;
+      this.isIndeterminate =
+        checkedCount2 > 0 && checkedCount2 < this.supports.length;
+    },
+    handleCheckAllChangeContents(val4) {
+      this.checkedContents = val4 ? Contents : [];
+      this.isIndeterminate = false;
+    },
+    handleCheckedContents(value4) {
+      let checkedCount3 = value4.length;
+      this.checkAllContent = checkedCount3 === this.contents.length;
+      this.isIndeterminate =
+        checkedCount3 > 0 && checkedCount3 < this.contents.length;
+    },
+    handleCheckAllChangeClients(val5) {
+      this.checkedClients = val5 ? Clients : [];
+      this.isIndeterminate = false;
+    },
+    handleCheckedClients(value5) {
+      let checkedCount4 = value5.length;
+      this.checkAllClient = checkedCount4 === this.clients.length;
+      this.isIndeterminate =
+        checkedCount4 > 0 && checkedCount4 < this.clients.length;
     },
   },
 };
@@ -68,10 +202,13 @@ export default {
   display: flex !important;
   flex-direction: column;
 }
-.custom-collapse {
-  /* display: flex !important;
-  flex-direction: row-reverse !important;
-  justify-content: space-between !important; */
 
+.el-checkbox__label {
+  font-size: 11px !important;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: #3a4458 !important;
+  border-color: #3a4458 !important;
 }
 </style>
