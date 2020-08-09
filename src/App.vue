@@ -1,28 +1,59 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header></Header>
+    <el-row>
+      <el-col :span="1">
+        <Navbar></Navbar>
+      </el-col>
+      <el-col :span="23">
+        <div class="main">
+          <el-row>
+            <el-col :span="6">
+              <Clients></Clients>
+            </el-col>
+            <el-col :span="6">
+              <Informations></Informations>
+            </el-col>
+            <el-col :span="6">
+              <Authory></Authory>
+            </el-col>
+            <el-col :span="6">
+              <Managment></Managment>
+            </el-col>
+          </el-row>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header";
+import Authory from "./components/Authory";
+import Clients from "./components/Clients";
+import Informations from "./components/Informations";
+import Managment from "./components/Managment";
+import Navbar from "./components/Navbar";
 
 export default {
-  name: 'App',
+  name: "app",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    Authory,
+    Clients,
+    Informations,
+    Managment,
+    Navbar,
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: #eeeff9;
+}
+.main {
+  margin-top: 10px;
+  margin-left: 7px;
 }
 </style>
